@@ -1,0 +1,62 @@
+FAIL  ./index.test.js
+  √ Calcular segundo grau 1 (5 ms)
+  √ Calcular segundo grau 2
+  √ Calcular segundo grau 3
+  √ Calcular segundo grau 4 (1 ms)
+  × Calcular segundo grau 5 (3 ms)
+  √ Calcular primeiro grau 1
+  √ Calcular primeiro grau 2
+  √ Calcular primeiro grau 3
+  × Calcular primeiro grau 4 (1 ms)
+  √ Calcular primeiro grau 5 (1 ms)
+
+  ● Calcular segundo grau 5
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 4
+    Received: 0
+
+      23 | test('Calcular segundo grau 5', () => {
+      24 |     const result = index.solucaoSegundoGrau(0,4,-16);
+    > 25 |     expect(result).toEqual(4);
+         |                    ^
+      26 |     //teste com resultado invalido, pois o programa retorna sempre 0 se a for nulo, já que não é possivel calcular uma euqção de segundo grau com a = 0.
+      27 | })
+      28 |
+
+      at Object.<anonymous> (index.test.js:25:20)
+
+  ● Calcular primeiro grau 4
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: -16
+    Received: 0
+
+      45 | test('Calcular primeiro grau 4', () => {
+      46 |     const result = index.solucaoPrimeiroGrau(0,-16);
+    > 47 |     expect(result).toEqual(-16);
+         |                    ^
+      48 |     //teste com resultado invalido, visto que 0x -16 = 0 não é algo verdadeiro.
+      49 | })
+      50 |
+
+      at Object.<anonymous> (index.test.js:47:20)
+
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+----------|---------|----------|---------|---------|-------------------
+All files |    96.3 |    90.91 |     100 |    96.3 |
+ index.js |    96.3 |    90.91 |     100 |    96.3 | 20-22
+----------|---------|----------|---------|---------|-------------------
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 8 passed, 10 total
+Snapshots:   0 total
+Time:        1.113 s
+Ran all test suites.
+npm ERR! Test failed.  See above for more details.
+
+C:\Users\pedro\OneDrive\Projetos\tdd-test>
+
+
